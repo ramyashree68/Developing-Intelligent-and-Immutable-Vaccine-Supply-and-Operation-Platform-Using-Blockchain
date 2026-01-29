@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HOME Page — Vaccine Supply m</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #9E4638;
+      --card: #0f172a;
+      --muted: #a7b0c0;
+      --text: #e5e7eb;
+      --brand: #5eead4;   /* teal */
+      --brand-dark: #14b8a6;
+      --accent: #60a5fa;  /* blue */
+      --maxw: 1100px;
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: linear-gradient(180deg,#954535 0%, #0b1220 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a{color:inherit;text-decoration:none}
+
+    /* Layout */
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+
+    /* Header / Nav */
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: saturate(180%) blur(10px);
+      background: rgba(12,12,30,.6);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 0 24px rgba(94,234,212,.6)}
+    .brand .title{letter-spacing:.2px}
+
+    .nav ul{display:flex;gap:8px;list-style:none;margin:0;padding:0}
+    .nav a.navlink{
+      display:inline-block;padding:10px 14px;border-radius:12px;
+      color:var(--text);font-weight:600;letter-spacing:.2px;
+      transition:all .18s ease;
+    }
+    .nav a.navlink:hover{background:rgba(255,255,255,.06)}
+    .nav a.active{background:linear-gradient(135deg, rgba(94,234,212,.15), rgba(96,165,250,.15));
+      outline:1px solid rgba(94,234,212,.35)}
+
+    /* Hero */
+    .hero{padding:48px 24px 24px}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    @media (max-width: 900px){.hero-inner{grid-template-columns:1fr}}
+
+    .hero h1{
+      font-size: clamp(28px, 3vw, 40px);
+      line-height:1.2;margin:0 0 12px;font-weight:800;
+      background: linear-gradient(135deg, var(--text), #cbd5e1);
+      -webkit-background-clip: text; background-clip:text; color: transparent;
+    }
+    .hero p{color:var(--muted);margin:0}
+
+    .hero-card{
+      background: rgba(12,12,30,.6);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(2,6,23,.4);
+      padding: 22px;
+    }
+
+    .hero-media{
+      background: var(--card);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      padding: 10px; display:flex;align-items:center;justify-content:center;
+      box-shadow: 0 10px 30px rgba(2,6,23,.4);
+    }
+    .hero-media img{max-width:100%;height:auto;border-radius:12px;display:block}
+
+    /* Content */
+    .section{padding:24px}
+    .card{
+      background: rgba(12,12,30,.6);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      padding: 24px; margin-top:18px;
+    }
+    h2{margin:0 0 8px;font-size: clamp(20px, 2.2vw, 26px)}
+    .chipbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{
+      padding:6px 10px;border-radius:999px;font-size:13px;font-weight:600;
+       background: rgba(12,12,30,.6);
+      outline:1px solid rgba(96,165,250,.35);
+      
+    }
+
+    /* Footer */
+    footer{padding:36px 24px;color:;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav container" aria-label="Primary">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <a href="index.html" class="title"> Immutable Vaccine Supply  </a>
+      </div>
+      <ul>
+        <li><a class="navlink active" href="index.html">Home</a></li>
+        <li><a class="navlink" href="A_Login.jsp">Admin</a></li>
+        <li><a class="navlink" href="U_Login.jsp">User</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-inner">
+        <div class="hero-card">
+          <h1>Developing Intelligent and Immutable Vaccine Supply and Operation Platform Using Blockchain</h1>
+          <p>
+            During times of crisis, like in healthcare emergencies or disruptions in logistics and supply chains, decision-makers encounter significant challenges in managing resources efficiently. This study proposes an approach combining different information types and advanced computer techniques to improve how we handle crises. By looking at data connected with blockchain technology, we aim to understand crises better and help people make smarter decisions.
+          </p>
+          <p>
+            We use a special kind of computer model called Hashing to guess what might happen during a crisis—like how many people might get sick or if there might be problems with getting supplies. Our model is right about 87% of the time. To understand why the computer makes these guesses, we use a method called SHapley Additive exPlanations (SHAP). We also suggest changes that improve short‑window explanations.
+          </p>
+          
+        </div>
+        <div class="hero-media" aria-label="Project Illustration">
+          <!-- Single centered image only -->
+          <img src="images/h.jpg" alt="Blockchain and AI driven vaccine supply visualization" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="card">
+        <h2>Overview</h2>
+        <p>
+          To ensure our idea works, we compare our model’s forecasts and explanations with alternatives that learn from the data differently, highlighting trade‑offs during different crisis stages. The platform emphasizes auditability, tamper‑evidence, and transparent model reasoning to support reliable public health operations.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Immutable Vaccine Supply</div>
+  </footer>
+</body>
+</html>
